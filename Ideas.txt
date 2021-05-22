@@ -1,0 +1,3 @@
+Spelling Correcter
+Language Detector
+POS Tagging
