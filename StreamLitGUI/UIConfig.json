@@ -1,0 +1,10 @@
+{
+    "PROJECT_NAME": "Mozhi",
+    "PROJECT_LINK": "https://github.com/KausikN/Mozhi",
+
+    "PROJECT_DESC": "Fun python based language and text tools",
+
+    "PROJECT_README": "README.md",
+
+    "PROJECT_MODES": ["Text Analyser", "Spelling Corrector", "Translate Text"]
+}
