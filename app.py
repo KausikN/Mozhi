@@ -3,7 +3,6 @@ Stream lit GUI for hosting Mozhi
 """
 
 # Imports
-from re import sub
 import streamlit as st
 import json
 import matplotlib.pyplot as plt
