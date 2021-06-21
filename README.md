@@ -3,6 +3,16 @@
 
  Hosted at [https://infinityjoker-mozhi.herokuapp.com/](https://infinityjoker-mozhi.herokuapp.com/)
 
+# GUI
+ - Install streamlit using
+   ```
+   pip install streamlit
+   ```
+ - Launch Streamlit GUI in the repo folder by
+   ```
+   streamlit run app.py
+   ```
+
 # Analyse Text
  - Language Detection
  - Word Frequency Analysis
