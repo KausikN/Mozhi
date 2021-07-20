@@ -43,6 +43,8 @@ def HomePage():
 LANGUAGES_NAMES_MAP = Mozhi.LANGUAGES_NAMES_MAP
 POS_TAGS_MAP = Mozhi.POS_TAGS_MAP
 
+TEXTAREA_HEIGHT = 250
+
 # Util Functions
 def HorizontalFigure(stw, title, names, values, lims=[-1.0, 1.0], thickness=0.1):
     fig_HFigure = plt.figure()
@@ -113,7 +115,7 @@ def text_analyser():
     st.header("Text Analyser")
 
     # Load Inputs
-    USERINPUT_text = st.text_area("Enter Text", "Hello World!")
+    USERINPUT_text = st.text_area("Enter Text", "Hello World!", height=TEXTAREA_HEIGHT)
 
     # Process Inputs
     AnalysedData = Mozhi.GetTextAnalysis(USERINPUT_text)
@@ -136,20 +138,20 @@ def spelling_corrector():
     st.header("Correct Spelling")
 
     # Load Inputs
-    USERINPUT_text = st.text_area("Enter Text", "Hello World!")
+    USERINPUT_text = st.text_area("Enter Text", "Hello World!", height=TEXTAREA_HEIGHT)
 
     # Process Inputs
     SpellCorrectedText = Mozhi.SpellCorrect(USERINPUT_text)
 
     # Display Outputs
-    USERINPUT_text = st.text_area("Corrected Text", SpellCorrectedText)
+    USERINPUT_text = st.text_area("Corrected Text", SpellCorrectedText, height=TEXTAREA_HEIGHT)
 
 def translate_text():
     # Title
     st.header("Translate Text")
 
     # Load Inputs
-    USERINPUT_text = st.text_area("Enter Text", "Hello World!")
+    USERINPUT_text = st.text_area("Enter Text", "Hello World!", height=TEXTAREA_HEIGHT)
     USERINPUT_toLanguageName = st.selectbox("Target Language", list(LANGUAGES_NAMES_MAP.keys()))
     
     # Process Inputs on Button Click
@@ -158,7 +160,7 @@ def translate_text():
     TranslatedText = Mozhi.TranslateText(USERINPUT_text, USERINPUT_toLang)
 
     # Display Outputs
-    USERINPUT_text = st.text_area("Translated Text", TranslatedText)
+    USERINPUT_text = st.text_area("Translated Text", TranslatedText, height=TEXTAREA_HEIGHT)
     
 #############################################################################################################################
 # Driver Code
