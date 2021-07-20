@@ -1,0 +1,72 @@
+{
+    "name": "Mozhi",
+    "repoLink": "https://github.com/KausikN/Mozhi",
+    "localPath": "E:/Github Codes and Projects/Projects/Mozhi",
+    "modules": {
+        "app.py": {
+            "name": "app",
+            "type": "local",
+            "link": "https://github.com/KausikN/Mozhi/blob/master/app.py",
+            "parentDir": "E:/Github Codes and Projects/Projects/Mozhi",
+            "subDir": "",
+            "dependencies": [
+                "streamlit.py",
+                "json.py",
+                "matplotlib.pyplot.py",
+                "Mozhi.py"
+            ]
+        },
+        "Mozhi.py": {
+            "name": "Mozhi",
+            "type": "local",
+            "link": "https://github.com/KausikN/Mozhi/blob/master/Mozhi.py",
+            "parentDir": "E:/Github Codes and Projects/Projects/Mozhi",
+            "subDir": "",
+            "dependencies": [
+                "json.py",
+                "requests.py",
+                "textblob.py"
+            ]
+        },
+        "streamlit.py": {
+            "name": "streamlit",
+            "type": "inbuilt",
+            "link": "",
+            "parentDir": "E:/Github Codes and Projects/Projects/Mozhi",
+            "subDir": "",
+            "dependencies": []
+        },
+        "textblob.py": {
+            "name": "textblob",
+            "type": "inbuilt",
+            "link": "",
+            "parentDir": "E:/Github Codes and Projects/Projects/Mozhi",
+            "subDir": "",
+            "dependencies": []
+        },
+        "requests.py": {
+            "name": "requests",
+            "type": "inbuilt",
+            "link": "",
+            "parentDir": "E:/Github Codes and Projects/Projects/Mozhi",
+            "subDir": "",
+            "dependencies": []
+        },
+        "matplotlib.pyplot.py": {
+            "name": "matplotlib.pyplot",
+            "type": "inbuilt",
+            "link": "",
+            "parentDir": "E:/Github Codes and Projects/Projects/Mozhi",
+            "subDir": "",
+            "dependencies": []
+        },
+        "json.py": {
+            "name": "json",
+            "type": "inbuilt",
+            "link": "",
+            "parentDir": "E:/Github Codes and Projects/Projects/Mozhi",
+            "subDir": "",
+            "dependencies": []
+        }
+    }
+}
