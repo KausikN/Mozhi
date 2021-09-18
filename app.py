@@ -79,14 +79,14 @@ def UI_SentimentAnalysis(SentimentData):
     st.markdown("### Sentiment Analysis")
 
     st.markdown("#### Overall Sentiment")
-    col1, col2 = st.beta_columns(2)
+    col1, col2 = st.columns(2)
     polarity = SentimentData.polarity
     subjectivity = SentimentData.subjectivity
     HorizontalFigure(col1, 'Overall Polarity', ['Polarity'], [polarity], lims=[-1.0, 1.0], thickness=0.01)
     HorizontalFigure(col2, 'Overall Subjectivity', ['Subjectivity'], [subjectivity], lims=[0.0, 1.0], thickness=0.01)
 
     st.markdown("#### Words Sentiment")
-    col1, col2 = st.beta_columns(2)
+    col1, col2 = st.columns(2)
     assessments = SentimentData.assessments
     wordGroups = []
     polarities = []
@@ -105,7 +105,7 @@ def UI_LanguageAnalysis(LanguageData):
     for l in LANGUAGES_NAMES_MAP.keys():
         if LANGUAGES_NAMES_MAP[l].lower() == LanguageData.lower():
             LanguageName = l
-    col1, col2 = st.beta_columns(2)
+    col1, col2 = st.columns(2)
     col1.markdown("Language of the text: ")
     col2.markdown(LanguageName)
 
@@ -126,7 +126,7 @@ def text_analyser():
 
     # Display Outputs
     st.markdown("## Analysis")
-    col1, col2 = st.beta_columns(2)
+    col1, col2 = st.columns(2)
     USERINPUT_AnalysisChoice = col1.selectbox("Analysis", list(AnalysedData.keys()))
     col2.text_area("Analysis Data", str(AnalysedData[USERINPUT_AnalysisChoice]))
     UI_LanguageAnalysis(LanguageData)
