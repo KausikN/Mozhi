@@ -7,7 +7,7 @@ import streamlit as st
 import json
 import matplotlib.pyplot as plt
 
-import Mozhi
+from Mozhi import *
 
 # Main Vars
 config = json.load(open('./StreamLitGUI/UIConfig.json', 'r'))
@@ -40,9 +40,6 @@ def HomePage():
 
 #############################################################################################################################
 # Repo Based Vars
-LANGUAGES_NAMES_MAP = Mozhi.LANGUAGES_NAMES_MAP
-POS_TAGS_MAP = Mozhi.POS_TAGS_MAP
-
 TEXTAREA_HEIGHT = 250
 
 # Util Functions
@@ -82,8 +79,8 @@ def UI_SentimentAnalysis(SentimentData):
     col1, col2 = st.columns(2)
     polarity = SentimentData.polarity
     subjectivity = SentimentData.subjectivity
-    HorizontalFigure(col1, 'Overall Polarity', ['Polarity'], [polarity], lims=[-1.0, 1.0], thickness=0.01)
-    HorizontalFigure(col2, 'Overall Subjectivity', ['Subjectivity'], [subjectivity], lims=[0.0, 1.0], thickness=0.01)
+    HorizontalFigure(col1, "Overall Polarity", ["Polarity"], [polarity], lims=[-1.0, 1.0], thickness=0.01)
+    HorizontalFigure(col2, "Overall Subjectivity", ["Subjectivity"], [subjectivity], lims=[0.0, 1.0], thickness=0.01)
 
     st.markdown("#### Words Sentiment")
     col1, col2 = st.columns(2)
@@ -96,12 +93,12 @@ def UI_SentimentAnalysis(SentimentData):
         polarities.append(float(a[1]))
         subjectivities.append(float(a[2]))
 
-    HorizontalFigure(col1, 'Word Polarity', wordGroups, polarities, lims=[-1.0, 1.0])
-    HorizontalFigure(col2, 'Word Subjectivity', wordGroups, subjectivities, lims=[0.0, 1.0])
+    HorizontalFigure(col1, "Word Polarity", wordGroups, polarities, lims=[-1.0, 1.0])
+    HorizontalFigure(col2, "Word Subjectivity", wordGroups, subjectivities, lims=[0.0, 1.0])
 
 def UI_LanguageAnalysis(LanguageData):
     st.markdown("### Language Analysis")
-    LanguageName = 'Unknown'
+    LanguageName = "Unknown"
     for l in LANGUAGES_NAMES_MAP.keys():
         if LANGUAGES_NAMES_MAP[l].lower() == LanguageData.lower():
             LanguageName = l
@@ -118,11 +115,11 @@ def text_analyser():
     USERINPUT_text = st.text_area("Enter Text", "Hello World!", height=TEXTAREA_HEIGHT)
 
     # Process Inputs
-    AnalysedData = Mozhi.GetTextAnalysis(USERINPUT_text)
-    LanguageData = AnalysedData['language']
-    PosTagsData = AnalysedData['pos_tags']
-    SentimentData = AnalysedData['sentiment_assessments']
-    WordData = dict(AnalysedData['word_counts'])
+    AnalysedData = GetTextAnalysis(USERINPUT_text)
+    LanguageData = AnalysedData["language"]
+    PosTagsData = AnalysedData["pos_tags"]
+    SentimentData = AnalysedData["sentiment_assessments"]
+    WordData = dict(AnalysedData["word_counts"])
 
     # Display Outputs
     st.markdown("## Analysis")
@@ -141,7 +138,7 @@ def spelling_corrector():
     USERINPUT_text = st.text_area("Enter Text", "Hello World!", height=TEXTAREA_HEIGHT)
 
     # Process Inputs
-    SpellCorrectedText = Mozhi.SpellCorrect(USERINPUT_text)
+    SpellCorrectedText = SpellCorrect(USERINPUT_text)
 
     # Display Outputs
     USERINPUT_text = st.text_area("Corrected Text", SpellCorrectedText, height=TEXTAREA_HEIGHT)
@@ -157,7 +154,7 @@ def translate_text():
     # Process Inputs on Button Click
     # if st.button('Translate'):
     USERINPUT_toLang = LANGUAGES_NAMES_MAP[USERINPUT_toLanguageName]
-    TranslatedText = Mozhi.TranslateText(USERINPUT_text, USERINPUT_toLang)
+    TranslatedText = TranslateText(USERINPUT_text, USERINPUT_toLang)
 
     # Display Outputs
     USERINPUT_text = st.text_area("Translated Text", TranslatedText, height=TEXTAREA_HEIGHT)

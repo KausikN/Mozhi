@@ -12,7 +12,7 @@
             "dependencies": [
                 "streamlit.py",
                 "json.py",
-                "matplotlib.pyplot.py",
+                "matplotlib/pyplot.py",
                 "Mozhi.py"
             ]
         },
@@ -25,19 +25,11 @@
             "dependencies": [
                 "json.py",
                 "requests.py",
-                "textblob.py"
+                "TextBlob.py"
             ]
         },
-        "streamlit.py": {
-            "name": "streamlit",
-            "type": "inbuilt",
-            "link": "",
-            "parentDir": "E:/Github Codes and Projects/Projects/Mozhi",
-            "subDir": "",
-            "dependencies": []
-        },
-        "textblob.py": {
-            "name": "textblob",
+        "TextBlob.py": {
+            "name": "TextBlob",
             "type": "inbuilt",
             "link": "",
             "parentDir": "E:/Github Codes and Projects/Projects/Mozhi",
@@ -52,12 +44,20 @@
             "subDir": "",
             "dependencies": []
         },
-        "matplotlib.pyplot.py": {
-            "name": "matplotlib.pyplot",
+        "streamlit.py": {
+            "name": "streamlit",
             "type": "inbuilt",
             "link": "",
             "parentDir": "E:/Github Codes and Projects/Projects/Mozhi",
             "subDir": "",
+            "dependencies": []
+        },
+        "matplotlib/pyplot.py": {
+            "name": "pyplot",
+            "type": "inbuilt",
+            "link": "",
+            "parentDir": "E:/Github Codes and Projects/Projects/Mozhi",
+            "subDir": "matplotlib",
             "dependencies": []
         },
         "json.py": {

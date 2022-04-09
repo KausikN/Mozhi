@@ -1,9 +1,9 @@
 {
     "repo_name": "Mozhi",
     "requirements": [
-        "streamlit",
-        "requests",
-        "textblob==0.15.3",
-        "matplotlib"
+        "streamlit==1.8.0",
+        "requests==2.26.0",
+        "textblob==0.17.1",
+        "matplotlib==3.4.3"
     ]
 }
