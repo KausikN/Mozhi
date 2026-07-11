@@ -1,13 +1,13 @@
 # Mozhi
- Fun python based language and text tools
+Fun python based language and text tools
 
 # GUI
 [![https://infinityjoker-apps.herokuapp.com/](https://pyheroku-badge.herokuapp.com/?app=infinityjoker-apps&style=plastic)](https://infinityjoker-apps.herokuapp.com/)
 
- - GUI built using streamlit
- - To use app locally,
-    - Clone the repo and run [StartUI.sh](StartUI.sh) to view the app on your browser!
- - App is also hosted remotely on heroku using my common host app,
+- GUI built using streamlit
+- To use app locally,
+    - Clone the repo and run [run.sh](run.sh) to view the app on your browser!
+- App is also hosted remotely on heroku using my common host app,
     - [https://infinityjoker-apps.herokuapp.com/](https://infinityjoker-apps.herokuapp.com/)
 
     - In the Common Host App, simply choose a project to load and click load and deploy.
@@ -17,9 +17,9 @@
     - If you want to change to another app, simply click on View Other Projects in top left and choose any other project and load and deploy.
 
 # Analyse Text
- - Language Detection
- - Word Frequency Analysis
- - Sentiment Analysis
+- Language Detection
+- Word Frequency Analysis
+- Sentiment Analysis
     - Overall polarity and subjectivity
     - Word wise polarity and subjectivity
 

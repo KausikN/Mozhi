@@ -4,5 +4,8 @@
         "app.py",
         "Mozhi.py",
         "Data/"
-    ]
+    ],
+    "streamlit": {
+        "link": ""
+    }
 }
